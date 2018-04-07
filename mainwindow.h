@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QDebug>
 #include <QFile>
+#include <QFileDialog>
 #include <QMessageBox>
 #include "datamanage.h"
 
@@ -58,6 +59,18 @@ private slots:
 
     void on_pushButton_create_clicked();
 
+    void on_actionExit_triggered();
+
+    void on_actionNew_File_triggered();
+
+    void on_actionAbout_triggered();
+
+    void on_actionAboutQt_triggered();
+
+    void on_actionStyle_White_triggered();
+
+    void on_actionStyle_Black_triggered();
+
 private:
     Ui::MainWindow *ui;
 
@@ -71,6 +84,13 @@ private:
     void setcheckbox();
     void getcheckbox();
     void resetcheckbox(bool logic);
+
+    QString output_file = "";
+    QString log_path = "";
+
+    QLabel *msgLabel;
+
+    void showStatusMessage(const QString &message);
 };
 
 #endif // MAINWINDOW_H
