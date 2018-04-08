@@ -60,12 +60,12 @@ void MainWindow::on_lineEdit_maininput_returnPressed()
 
                 output();
             }
-            ui->checkBox_plotall->setChecked(false);
+            ui->switchControl_plotall->setToggle(false);
             setcheckbox();
         }
         else
         {
-            ui->checkBox_plotall->setChecked(false);
+            ui->switchControl_plotall->setToggle(false);
             setcheckbox();
         }
         ui->verticalSlider_page->setValue(current_page + 1);
@@ -73,6 +73,8 @@ void MainWindow::on_lineEdit_maininput_returnPressed()
 
         ui->lcdNumber_page->display(current_page + 1);
         ui->lcdNumber_plain->display(current_plain + 1);
+
+        ui->switchControl_plotall->setToggle(false);
     }
     else
     {
@@ -85,10 +87,7 @@ void MainWindow::on_lineEdit_maininput_returnPressed()
         }
         else
         {
-            if(ui->checkBox_inputtype->isChecked())
-                datamanager.setdata(current_page,current_plain,(input_number-1),true);
-            else
-                datamanager.setdata(current_page,current_plain,(input_number-1),false);
+            datamanager.setdata(current_page,current_plain,(input_number-1),!datamanager.getdata(current_page,current_plain,(input_number-1)));
 
             setcheckbox();
         }
@@ -164,50 +163,51 @@ void MainWindow::output()
 
 void MainWindow::resetcheckbox(bool logic)
 {
-    ui->checkBox_plot01->setChecked(logic);
-    ui->checkBox_plot02->setChecked(logic);
-    ui->checkBox_plot03->setChecked(logic);
-    ui->checkBox_plot04->setChecked(logic);
-    ui->checkBox_plot05->setChecked(logic);
-    ui->checkBox_plot06->setChecked(logic);
-    ui->checkBox_plot07->setChecked(logic);
-    ui->checkBox_plot08->setChecked(logic);
-    ui->checkBox_plot09->setChecked(logic);
-    ui->checkBox_plot10->setChecked(logic);
-    ui->checkBox_plot11->setChecked(logic);
-    ui->checkBox_plot12->setChecked(logic);
+    ui->switchControl_plot01->setToggle(logic);
+    ui->switchControl_plot01->setToggle(logic);
+    ui->switchControl_plot02->setToggle(logic);
+    ui->switchControl_plot03->setToggle(logic);
+    ui->switchControl_plot04->setToggle(logic);
+    ui->switchControl_plot05->setToggle(logic);
+    ui->switchControl_plot06->setToggle(logic);
+    ui->switchControl_plot07->setToggle(logic);
+    ui->switchControl_plot08->setToggle(logic);
+    ui->switchControl_plot09->setToggle(logic);
+    ui->switchControl_plot10->setToggle(logic);
+    ui->switchControl_plot11->setToggle(logic);
+    ui->switchControl_plot12->setToggle(logic);
 }
 
 void MainWindow::getcheckbox()
 {
-    datamanager.setdata(current_page,current_plain,0,ui->checkBox_plot01->isChecked());
-    datamanager.setdata(current_page,current_plain,1,ui->checkBox_plot02->isChecked());
-    datamanager.setdata(current_page,current_plain,2,ui->checkBox_plot03->isChecked());
-    datamanager.setdata(current_page,current_plain,3,ui->checkBox_plot04->isChecked());
-    datamanager.setdata(current_page,current_plain,4,ui->checkBox_plot05->isChecked());
-    datamanager.setdata(current_page,current_plain,5,ui->checkBox_plot06->isChecked());
-    datamanager.setdata(current_page,current_plain,6,ui->checkBox_plot07->isChecked());
-    datamanager.setdata(current_page,current_plain,7,ui->checkBox_plot08->isChecked());
-    datamanager.setdata(current_page,current_plain,8,ui->checkBox_plot09->isChecked());
-    datamanager.setdata(current_page,current_plain,9,ui->checkBox_plot10->isChecked());
-    datamanager.setdata(current_page,current_plain,10,ui->checkBox_plot11->isChecked());
-    datamanager.setdata(current_page,current_plain,11,ui->checkBox_plot12->isChecked());
+    datamanager.setdata(current_page,current_plain,0,ui->switchControl_plot01->isToggled());
+    datamanager.setdata(current_page,current_plain,1,ui->switchControl_plot02->isToggled());
+    datamanager.setdata(current_page,current_plain,2,ui->switchControl_plot03->isToggled());
+    datamanager.setdata(current_page,current_plain,3,ui->switchControl_plot04->isToggled());
+    datamanager.setdata(current_page,current_plain,4,ui->switchControl_plot05->isToggled());
+    datamanager.setdata(current_page,current_plain,5,ui->switchControl_plot06->isToggled());
+    datamanager.setdata(current_page,current_plain,6,ui->switchControl_plot07->isToggled());
+    datamanager.setdata(current_page,current_plain,7,ui->switchControl_plot08->isToggled());
+    datamanager.setdata(current_page,current_plain,8,ui->switchControl_plot09->isToggled());
+    datamanager.setdata(current_page,current_plain,9,ui->switchControl_plot10->isToggled());
+    datamanager.setdata(current_page,current_plain,10,ui->switchControl_plot11->isToggled());
+    datamanager.setdata(current_page,current_plain,11,ui->switchControl_plot12->isToggled());
 }
 
 void MainWindow::setcheckbox()
 {
-    ui->checkBox_plot01->setChecked(datamanager.getdata(current_page,current_plain,0));
-    ui->checkBox_plot02->setChecked(datamanager.getdata(current_page,current_plain,1));
-    ui->checkBox_plot03->setChecked(datamanager.getdata(current_page,current_plain,2));
-    ui->checkBox_plot04->setChecked(datamanager.getdata(current_page,current_plain,3));
-    ui->checkBox_plot05->setChecked(datamanager.getdata(current_page,current_plain,4));
-    ui->checkBox_plot06->setChecked(datamanager.getdata(current_page,current_plain,5));
-    ui->checkBox_plot07->setChecked(datamanager.getdata(current_page,current_plain,6));
-    ui->checkBox_plot08->setChecked(datamanager.getdata(current_page,current_plain,7));
-    ui->checkBox_plot09->setChecked(datamanager.getdata(current_page,current_plain,8));
-    ui->checkBox_plot10->setChecked(datamanager.getdata(current_page,current_plain,9));
-    ui->checkBox_plot11->setChecked(datamanager.getdata(current_page,current_plain,10));
-    ui->checkBox_plot12->setChecked(datamanager.getdata(current_page,current_plain,11));
+    ui->switchControl_plot01->setToggle(datamanager.getdata(current_page,current_plain,0));
+    ui->switchControl_plot02->setToggle(datamanager.getdata(current_page,current_plain,1));
+    ui->switchControl_plot03->setToggle(datamanager.getdata(current_page,current_plain,2));
+    ui->switchControl_plot04->setToggle(datamanager.getdata(current_page,current_plain,3));
+    ui->switchControl_plot05->setToggle(datamanager.getdata(current_page,current_plain,4));
+    ui->switchControl_plot06->setToggle(datamanager.getdata(current_page,current_plain,5));
+    ui->switchControl_plot07->setToggle(datamanager.getdata(current_page,current_plain,6));
+    ui->switchControl_plot08->setToggle(datamanager.getdata(current_page,current_plain,7));
+    ui->switchControl_plot09->setToggle(datamanager.getdata(current_page,current_plain,8));
+    ui->switchControl_plot10->setToggle(datamanager.getdata(current_page,current_plain,9));
+    ui->switchControl_plot11->setToggle(datamanager.getdata(current_page,current_plain,10));
+    ui->switchControl_plot12->setToggle(datamanager.getdata(current_page,current_plain,11));
 }
 
 void MainWindow::on_checkBox_type_stateChanged(int arg1)
@@ -234,66 +234,6 @@ void MainWindow::on_checkBox_type_stateChanged(int arg1)
         }
         datamanager.settype(Box_Type_Single);
     }
-}
-
-void MainWindow::on_checkBox_plot01_clicked()
-{
-    getcheckbox();
-}
-
-void MainWindow::on_checkBox_plot02_clicked()
-{
-    getcheckbox();
-}
-
-void MainWindow::on_checkBox_plot03_clicked()
-{
-    getcheckbox();
-}
-
-void MainWindow::on_checkBox_plot04_clicked()
-{
-    getcheckbox();
-}
-
-void MainWindow::on_checkBox_plot05_clicked()
-{
-    getcheckbox();
-}
-
-void MainWindow::on_checkBox_plot06_clicked()
-{
-    getcheckbox();
-}
-
-void MainWindow::on_checkBox_plot07_clicked()
-{
-    getcheckbox();
-}
-
-void MainWindow::on_checkBox_plot08_clicked()
-{
-    getcheckbox();
-}
-
-void MainWindow::on_checkBox_plot09_clicked()
-{
-    getcheckbox();
-}
-
-void MainWindow::on_checkBox_plot10_clicked()
-{
-    getcheckbox();
-}
-
-void MainWindow::on_checkBox_plot11_clicked()
-{
-    getcheckbox();
-}
-
-void MainWindow::on_checkBox_plot12_clicked()
-{
-    getcheckbox();
 }
 
 void MainWindow::on_pushButton_next_clicked()
@@ -327,19 +267,8 @@ void MainWindow::on_pushButton_next_clicked()
 
     ui->lcdNumber_page->display(current_page + 1);
     ui->lcdNumber_plain->display(current_plain + 1);
-}
 
-void MainWindow::on_checkBox_plotall_clicked()
-{
-    if(ui->checkBox_plotall->isChecked())
-    {
-        resetcheckbox(true);
-    }
-    else
-    {
-        resetcheckbox(false);
-    }
-    getcheckbox();
+    ui->switchControl_plotall->setToggle(false);
 }
 
 void MainWindow::on_pushButton_create_clicked()
@@ -356,6 +285,8 @@ void MainWindow::on_pushButton_create_clicked()
     ui->lcdNumber_plain->display(current_plain + 1);
 
     setcheckbox();
+
+    ui->switchControl_plotall->setToggle(false);
 }
 
 void MainWindow::on_verticalSlider_page_valueChanged(int value)
@@ -363,6 +294,7 @@ void MainWindow::on_verticalSlider_page_valueChanged(int value)
     current_page = value - 1;
     ui->lcdNumber_page->display(current_page + 1);
     setcheckbox();
+    ui->switchControl_plotall->setToggle(false);
 }
 
 void MainWindow::on_verticalSlider_plain_valueChanged(int value)
@@ -370,6 +302,7 @@ void MainWindow::on_verticalSlider_plain_valueChanged(int value)
     current_plain = value - 1;
     ui->lcdNumber_plain->display(current_plain + 1);
     setcheckbox();
+    ui->switchControl_plotall->setToggle(false);
 }
 
 void MainWindow::on_actionExit_triggered()
@@ -466,4 +399,68 @@ void MainWindow::on_actionStyle_Black_triggered()
         qApp->setStyleSheet(qss);
         file.close();
     }
+}
+
+void MainWindow::on_switchControl_plotall_toggled(bool checked)
+{
+    if(checked)
+    {
+        resetcheckbox(true);
+    }
+    else
+    {
+        resetcheckbox(false);
+    }
+    getcheckbox();
+}
+
+
+
+void MainWindow::on_switchControl_plot01_toggled(bool checked)
+{
+    datamanager.setdata(current_page,current_plain,0,checked);
+}
+void MainWindow::on_switchControl_plot02_toggled(bool checked)
+{
+    datamanager.setdata(current_page,current_plain,1,checked);
+}
+void MainWindow::on_switchControl_plot03_toggled(bool checked)
+{
+    datamanager.setdata(current_page,current_plain,2,checked);
+}
+void MainWindow::on_switchControl_plot04_toggled(bool checked)
+{
+    datamanager.setdata(current_page,current_plain,3,checked);
+}
+void MainWindow::on_switchControl_plot05_toggled(bool checked)
+{
+    datamanager.setdata(current_page,current_plain,4,checked);
+}
+void MainWindow::on_switchControl_plot06_toggled(bool checked)
+{
+    datamanager.setdata(current_page,current_plain,5,checked);
+}
+void MainWindow::on_switchControl_plot07_toggled(bool checked)
+{
+    datamanager.setdata(current_page,current_plain,6,checked);
+}
+void MainWindow::on_switchControl_plot08_toggled(bool checked)
+{
+    datamanager.setdata(current_page,current_plain,7,checked);
+}
+void MainWindow::on_switchControl_plot09_toggled(bool checked)
+{
+    datamanager.setdata(current_page,current_plain,8,checked);
+}
+void MainWindow::on_switchControl_plot10_toggled(bool checked)
+{
+    datamanager.setdata(current_page,current_plain,9,checked);
+}
+void MainWindow::on_switchControl_plot11_toggled(bool checked)
+{
+    datamanager.setdata(current_page,current_plain,10,checked);
+}
+void MainWindow::on_switchControl_plot12_toggled(bool checked)
+{
+    datamanager.setdata(current_page,current_plain,11,checked);
 }

@@ -27,11 +27,13 @@ RC_FILE += version.rc
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    datamanage.cpp
+    datamanage.cpp \
+    switchcontrol.cpp
 
 HEADERS += \
         mainwindow.h \
-    datamanage.h
+    datamanage.h \
+    switchcontrol.h
 
 FORMS += \
         mainwindow.ui

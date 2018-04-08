@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>637</width>
-    <height>565</height>
+    <width>856</width>
+    <height>714</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -50,16 +50,6 @@
      <layout class="QHBoxLayout" name="horizontalLayout_input">
       <item>
        <widget class="QLineEdit" name="lineEdit_maininput"/>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBox_inputtype">
-        <property name="text">
-         <string>正向输入</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_next">
@@ -150,11 +140,38 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QCheckBox" name="checkBox_plotall">
-           <property name="text">
-            <string>全选</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_plot02_12">
+           <item>
+            <widget class="SwitchControl" name="switchControl_plotall">
+             <property name="CheckedColor">
+              <color>
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </property>
+             <property name="ThumbColor">
+              <color>
+               <red>255</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_plotall">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>全选</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
           <spacer name="verticalSpacer">
@@ -170,88 +187,412 @@
           </spacer>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_plot01">
-           <property name="text">
-            <string>端子1</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_plot_01">
+           <item>
+            <widget class="SwitchControl" name="switchControl_plot01">
+             <property name="CheckedColor">
+              <color>
+               <red>255</red>
+               <green>85</green>
+               <blue>255</blue>
+              </color>
+             </property>
+             <property name="ThumbColor">
+              <color>
+               <red>255</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_plot01">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>端子01</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_plot02">
-           <property name="text">
-            <string>端子2</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_plot02">
+           <item>
+            <widget class="SwitchControl" name="switchControl_plot02">
+             <property name="CheckedColor">
+              <color>
+               <red>255</red>
+               <green>85</green>
+               <blue>255</blue>
+              </color>
+             </property>
+             <property name="ThumbColor">
+              <color>
+               <red>255</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_plot02">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>端子02</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_plot03">
-           <property name="text">
-            <string>端子3</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_plot02_2">
+           <item>
+            <widget class="SwitchControl" name="switchControl_plot03">
+             <property name="CheckedColor">
+              <color>
+               <red>255</red>
+               <green>85</green>
+               <blue>255</blue>
+              </color>
+             </property>
+             <property name="ThumbColor">
+              <color>
+               <red>255</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_plot03">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>端子03</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_plot04">
-           <property name="text">
-            <string>端子4</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_plot02_3">
+           <item>
+            <widget class="SwitchControl" name="switchControl_plot04">
+             <property name="CheckedColor">
+              <color>
+               <red>255</red>
+               <green>85</green>
+               <blue>255</blue>
+              </color>
+             </property>
+             <property name="ThumbColor">
+              <color>
+               <red>255</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_plot04">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>端子04</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_plot05">
-           <property name="text">
-            <string>端子5</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_plot02_4">
+           <item>
+            <widget class="SwitchControl" name="switchControl_plot05">
+             <property name="CheckedColor">
+              <color>
+               <red>255</red>
+               <green>85</green>
+               <blue>255</blue>
+              </color>
+             </property>
+             <property name="ThumbColor">
+              <color>
+               <red>255</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_plot05">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>端子05</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_plot06">
-           <property name="text">
-            <string>端子6</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_plot02_5">
+           <item>
+            <widget class="SwitchControl" name="switchControl_plot06">
+             <property name="CheckedColor">
+              <color>
+               <red>255</red>
+               <green>85</green>
+               <blue>255</blue>
+              </color>
+             </property>
+             <property name="ThumbColor">
+              <color>
+               <red>255</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_plot06">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>端子06</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_plot07">
-           <property name="text">
-            <string>端子7</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_plot02_6">
+           <item>
+            <widget class="SwitchControl" name="switchControl_plot07">
+             <property name="CheckedColor">
+              <color>
+               <red>255</red>
+               <green>85</green>
+               <blue>255</blue>
+              </color>
+             </property>
+             <property name="ThumbColor">
+              <color>
+               <red>255</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_plot07">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>端子07</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_plot08">
-           <property name="text">
-            <string>端子8</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_plot02_7">
+           <item>
+            <widget class="SwitchControl" name="switchControl_plot08">
+             <property name="CheckedColor">
+              <color>
+               <red>255</red>
+               <green>85</green>
+               <blue>255</blue>
+              </color>
+             </property>
+             <property name="ThumbColor">
+              <color>
+               <red>255</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_plot08">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>端子08</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_plot09">
-           <property name="text">
-            <string>端子9</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_plot02_8">
+           <item>
+            <widget class="SwitchControl" name="switchControl_plot09">
+             <property name="CheckedColor">
+              <color>
+               <red>255</red>
+               <green>85</green>
+               <blue>255</blue>
+              </color>
+             </property>
+             <property name="ThumbColor">
+              <color>
+               <red>255</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_plot09">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>端子09</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_plot10">
-           <property name="text">
-            <string>端子10</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_plot02_9">
+           <item>
+            <widget class="SwitchControl" name="switchControl_plot10">
+             <property name="CheckedColor">
+              <color>
+               <red>255</red>
+               <green>85</green>
+               <blue>255</blue>
+              </color>
+             </property>
+             <property name="ThumbColor">
+              <color>
+               <red>255</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_plot10">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>端子10</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_plot11">
-           <property name="text">
-            <string>端子11</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_plot02_10">
+           <item>
+            <widget class="SwitchControl" name="switchControl_plot11">
+             <property name="CheckedColor">
+              <color>
+               <red>255</red>
+               <green>85</green>
+               <blue>255</blue>
+              </color>
+             </property>
+             <property name="ThumbColor">
+              <color>
+               <red>255</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_plot11">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>端子11</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_plot12">
-           <property name="text">
-            <string>端子12</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_plot02_11">
+           <item>
+            <widget class="SwitchControl" name="switchControl_plot12">
+             <property name="CheckedColor">
+              <color>
+               <red>255</red>
+               <green>85</green>
+               <blue>255</blue>
+              </color>
+             </property>
+             <property name="ThumbColor">
+              <color>
+               <red>255</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_plot12">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>端子12</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
         </layout>
        </widget>
@@ -265,7 +606,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>637</width>
+     <width>856</width>
      <height>17</height>
     </rect>
    </property>
@@ -335,6 +676,13 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>SwitchControl</class>
+   <extends>QWidget</extends>
+   <header>switchcontrol.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="icon.qrc"/>
  </resources>

@@ -26,7 +26,7 @@ class DataManage : public QObject
 {
     Q_OBJECT
 public:
-    explicit DataManage(QObject *parent = nullptr);
+    explicit DataManage(QObject *parent = 0);
 
     void clear();
 

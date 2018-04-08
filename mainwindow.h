@@ -29,33 +29,7 @@ private slots:
 
     void on_checkBox_type_stateChanged(int arg1);
 
-    void on_checkBox_plot01_clicked();
-
-    void on_checkBox_plot02_clicked();
-
-    void on_checkBox_plot03_clicked();
-
-    void on_checkBox_plot04_clicked();
-
-    void on_checkBox_plot05_clicked();
-
-    void on_checkBox_plot06_clicked();
-
-    void on_checkBox_plot07_clicked();
-
-    void on_checkBox_plot08_clicked();
-
-    void on_checkBox_plot09_clicked();
-
-    void on_checkBox_plot10_clicked();
-
-    void on_checkBox_plot11_clicked();
-
-    void on_checkBox_plot12_clicked();
-
     void on_pushButton_next_clicked();
-
-    void on_checkBox_plotall_clicked();
 
     void on_pushButton_create_clicked();
 
@@ -70,6 +44,21 @@ private slots:
     void on_actionStyle_White_triggered();
 
     void on_actionStyle_Black_triggered();
+
+    void on_switchControl_plotall_toggled(bool checked);
+
+    void on_switchControl_plot01_toggled(bool checked);
+    void on_switchControl_plot02_toggled(bool checked);
+    void on_switchControl_plot03_toggled(bool checked);
+    void on_switchControl_plot04_toggled(bool checked);
+    void on_switchControl_plot05_toggled(bool checked);
+    void on_switchControl_plot06_toggled(bool checked);
+    void on_switchControl_plot07_toggled(bool checked);
+    void on_switchControl_plot08_toggled(bool checked);
+    void on_switchControl_plot09_toggled(bool checked);
+    void on_switchControl_plot10_toggled(bool checked);
+    void on_switchControl_plot11_toggled(bool checked);
+    void on_switchControl_plot12_toggled(bool checked);
 
 private:
     Ui::MainWindow *ui;
