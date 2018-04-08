@@ -64,7 +64,7 @@ QString DataManage::getresult()
                     result += "\t";
                     result += QString("'%1").arg((j+1), 2, 10, QChar('0'));
                     result += "\t";
-                    result +=  QString("'%1").arg((k+1), 2, 10, QChar('0'));
+                    result +=  QString("%1").arg((k+1));
                     result += "\t";
                     if(box_data.page[i].plate[j].inuse[k])
                         result += "在用";
@@ -89,7 +89,7 @@ QString DataManage::getresult()
                 result += "\t";
                 result += QString("'%1").arg((j+1), 2, 10, QChar('0'));
                 result += "\t";
-                result +=  QString("'%1").arg((k+1), 2, 10, QChar('0'));
+                result +=  QString("%1").arg((k+1));
                 result += "\t";
                 if(box_data.page[0].plate[j].inuse[k])
                     result += "在用";
